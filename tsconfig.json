@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "module": "ESNext",
+    "resolveJsonModule": true,
+    "noEmit": true
+  },
+  "include": ["src"]
+}

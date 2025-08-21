@@ -1,0 +1,28 @@
+{
+  "name": "@devcoons/row-normalizer",
+  "version": "0.1.0",
+  "description": "Type-safe, target-agnostic data normalization.",
+  "license": "GPL-3.0",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs --sourcemap --clean --platform neutral --target es2020",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  }
+}
