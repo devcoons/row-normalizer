@@ -7,11 +7,9 @@ npm i @devcoons/row-normalizer
 
 ## Usage
 ```ts
-import {
-  keyRule, normalizeRowsWithKeys, toYmdHm, type UuidCoercer
-} from '@devcoons/row-normalizer'
+import { keyRule, normalizeRowsWithKeys } from '@devcoons/row-normalizer'
 
-const bufToUuid: UuidCoercer = (v) => /* your impl */
+function bufToUuid .... /* your impl */
 
 const rules = [
   keyRule('user_id', (v) => bufToUuid(v as any)),
